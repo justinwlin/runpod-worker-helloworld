@@ -1,0 +1,166 @@
+[
+    {
+        "label": "runpod",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpod",
+        "description": "runpod",
+        "detail": "runpod",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "mock_open",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "rp_handler",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "adjust_concurrency",
+        "kind": 2,
+        "importPath": "src.rp_handler",
+        "description": "src.rp_handler",
+        "peekOfCode": "def adjust_concurrency(current_concurrency):\n    \"\"\"\n    Adjusts the concurrency level based on the current request rate.\n    \"\"\"\n    return 5\n# Start the serverless function with the handler and concurrency modifier\nrunpod.serverless.start({\n    \"handler\": process_request,\n    \"concurrency_modifier\": adjust_concurrency\n})",
+        "detail": "src.rp_handler",
+        "documentation": {}
+    },
+    {
+        "label": "TestRunpodHelloWorld",
+        "kind": 6,
+        "importPath": "tests.test_rp_handler",
+        "description": "tests.test_rp_handler",
+        "peekOfCode": "class TestRunpodHelloWorld(unittest.TestCase):\n    def test_hello_world_with_string(self):\n        # Test with a normal string\n        result = rp_handler.hello_world(\"World\")\n        self.assertEqual(result, \"Hello World\")\n    def test_hello_world_with_non_string(self):\n        # Test with a non-string type (e.g., an integer)\n        result = rp_handler.hello_world(123)\n        self.assertEqual(result, {\"error\": \"Please provide a String\"})\n    def test_hello_world_with_empty_string(self):",
+        "detail": "tests.test_rp_handler",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.bin.jp",
+        "description": "venv.bin.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "venv.bin.jp",
+        "documentation": {}
+    }
+]

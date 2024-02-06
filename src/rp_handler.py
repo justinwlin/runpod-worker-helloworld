@@ -1,20 +1,20 @@
 import runpod
+import asyncio
+import random
 
 
-def hello_world(greeting):
-    if not isinstance(greeting, str):
-        return {"error": "Please provide a String"}
+async def process_request(job):
+    await asyncio.sleep(10)  # Simulate processing time
+    return f"Processed: {job}"
 
-    return f"Hello {greeting}"
+def adjust_concurrency(current_concurrency):
+    """
+    Adjusts the concurrency level based on the current request rate.
+    """
+    return 5
 
-
-def handler(job):
-    job_input = job["input"]
-    greeting = job_input["greeting"]
-
-    return hello_world(greeting)
-
-
-# Start the handler only if this script is run directly
-if __name__ == "__main__":
-    runpod.serverless.start({"handler": handler})
+# Start the serverless function with the handler and concurrency modifier
+runpod.serverless.start({
+    "handler": process_request,
+    "concurrency_modifier": adjust_concurrency
+})
